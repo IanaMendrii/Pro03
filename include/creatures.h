@@ -3,7 +3,7 @@ class Creatures
 {
 protected:
 	int HealthInit;
-	int Health=100;
+	int Health;
 	int Damage;
 public:
 	int getRandomNumber(int min, int max);

@@ -17,5 +17,5 @@ int  Human::InitHealth()
 	}
 	void  Human::GetHeal()
 	{
-		cout << "You open a medkit";
+		cout << "You open a medkit ";
 	}

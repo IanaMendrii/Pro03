@@ -1,10 +1,9 @@
-#include "Creatures.h"
+#include "creatures.h"
 #include "game.h"
 #include <iostream>
 #include <string>
 #include <cstdlib> // for rand() and srand()
 #include <ctime> // for time()
-#include <conio.h> // for _getch()
 using namespace std;
 int Creatures::getRandomNumber(int min, int max)
 	{
@@ -45,14 +44,15 @@ int Creatures::GetDamage()
 			else
 			{
 
-				cout << "You kill the lizardman! ";
-				cout << "Congratulations, you've won your fight!" << endl;
+				cout << "You kill the"; Monster->CreatureName();
+				cout << ". Congratulations, you've won your fight!" << endl;
 				Game::StartGame(Player);
 
 			}
 		}
 		void Creatures::AttackPlayer(Creatures *&Player, Creatures *&Monster)
 		{
+			cout << "The"; Monster->CreatureName(); cout << " bites you"; Monster->Gun(); 
 			cout << "The"; Monster->CreatureName(); cout << " bites you for " << Player->GetDamage() << " damage! ";
 			int HP = Player->GetHealth();
 			if (Player->isDead())
@@ -61,7 +61,7 @@ int Creatures::GetDamage()
 			}
 			else
 			{
-				cout << "You are killed" << endl;
+				cout << "You are killed." << endl;
 				cout << "Goodbye" << endl;
 				system("pause");
 				exit(0);
